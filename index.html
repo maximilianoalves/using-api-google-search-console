@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+  <title>Using Api Google Searh Console</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/hello.js"></script>
+  <script src="js/res-content.js"></script>
+  <!--using OAuth2.0-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+  <header class="section grey darken-4 z-depth-2">
+    <div class="container">
+      <h1 class="white-text">Usando Api Google Search Console</h1>
+    </div>
+  </header>
+  <nav class="grey darken-3">
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Documentação</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="section">
+        <a class="waves-effect waves-light btn light-blue accent-4" onclick="googleLogin()">Google Entrar</a>
+        <a class="waves-effect waves-light btn light-blue accent-4" onclick="googleLogout()">Google Sair</a>
+        <a class="waves-effect waves-light btn light-blue accent-4" onclick="retornaListaDeSites()">RUN</a>
+        <!--<input placeholder="Id container" id="id-container" type="number" class="validate">
+        <a class="waves-effect waves-light btn light-blue accent-4" onclick="retornaContainers()">Containers do tag manager</a>-->
+        <ul id="request" class="collapsible" data-collapsible="accordion">
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  <script>
+  $(".collapsible").click(function(){
+    $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+  });
+  </script>
+</body>
+</html>
