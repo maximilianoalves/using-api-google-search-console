@@ -1,4 +1,4 @@
-# Documentação para implementação.
+#Implementação.
 
 ### 1. Realizar a autenticação
 A autenticação foi feita com a biblioteca [hello.js](https://adodson.com/hello.js/).
