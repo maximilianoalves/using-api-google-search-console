@@ -40,14 +40,14 @@ function retornaListaDeSites(){
   var count = -1;
   $.get("https://www.googleapis.com/webmasters/v3/sites?access_token=" + hello.getAuthResponse('google').access_token, function(data){
       for(var i = 0; i < data.siteEntry.length; i++){
-        sites.push(data.siteEntry[i].siteUrl);
         count++;
-      }
-        document.getElementById('request').innerHTML +=
-          "<li>" +
-            "<div class='collapsible-header'>" +
-            sites[count] +
-            "</div><div class='collapsible-body'><p>Lorem ipsum dolor sit amet.</p></div></li>";
+        sites.push(data.siteEntry[i].siteUrl);
+      document.getElementById('request').innerHTML +=
+        "<li>" +
+          "<div class='collapsible-header'>" +
+          sites[count] +
+          "</div><div class='collapsible-body'><p>Lorem</p></div></li>";
+    }
   });
 };
 ```
